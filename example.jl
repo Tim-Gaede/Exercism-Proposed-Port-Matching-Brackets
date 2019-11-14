@@ -14,7 +14,7 @@ function is_paired(input_string::String)
     i = 1
     while i ≤ length(cleaned)  &&  balanced
         symbol = cleaned[i]
-        if symbol in "([{"
+        if symbol ∈ "([{"
             push!(stack, symbol)
         else
             if length(stack) == 0
