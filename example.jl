@@ -8,7 +8,7 @@ function is_paired(input_string::String)
     if length(cleaned) % 2 == 1;    return false;    end
 
 
-    stack = [] # In Julia, you can just use an array 
+    stack = Char[] # In Julia, you can just use an array 
 
     balanced = true # default
     i = 1
