@@ -8,9 +8,9 @@ function is_paired(input_string::String)
     if length(cleaned) % 2 == 1;    return false;    end
 
 
-    stack = []#() # JUST USE AN ARRAY?
+    stack = [] # In Julia, you can just use an array 
 
-    balanced = true  # default
+    balanced = true # default
     i = 1
     while i ≤ length(cleaned)  &&  balanced
         symbol = cleaned[i]
@@ -37,27 +37,7 @@ function is_paired(input_string::String)
     end
 end
 
-#=
-struct Stack
-    function __init__(self)
-        self.items = []
-
-    function isEmpty(self)
-        return self.items == []
-
-    function push(self, item)
-        self.items.append(item)
-
-    function pop(self)
-        return self.items.pop()
-
-    function peek(self)
-        return self.items[length(self.items) - 1]
-
-    function size(self)
-        return length(self.items)
-    end
-=#
+ 
 
 
 function matches(left, right)
